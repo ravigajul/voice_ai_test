@@ -34,7 +34,7 @@ This script simulates a conversation between a human agent (you) and an AI-power
 
 ## The Test Flow
 
-1.  **You are the Agent**: You will play the role of the "Papa John's Agent".
+1.  **You are the Agent**: You will play the role of the "Pizza Company Agent".
 2.  **Start the Conversation**: The script will prompt you to speak your opening line.
 3.  **Listen for the Cue**: When you see the `🔴 Listening for Agent...` message, it's your turn to speak.
 4.  **AI Responds**: The script will capture your voice, transcribe it, and send it to the AI customer, "Ravi." Ravi will then think and generate a spoken response.

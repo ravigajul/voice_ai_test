@@ -1,0 +1,18 @@
+# Mobile Automation
+Appium-Python-Client>=3.1.0
+selenium>=4.15.0
+
+# Text-to-Speech (FREE - uses Microsoft Edge TTS)
+edge-tts>=6.1.9
+
+# Audio handling
+soundfile>=0.12.1 # Needed by Whisper for audio processing
+
+# AI Agent and Voice Recognition
+requests>=2.31.0  # For Ollama API calls
+SpeechRecognition>=3.10.1  # Speech recognition
+openai-whisper>=20231117 # More robust speech recognition
+pyaudio>=0.2.14
+
+# Utilities
+PyYAML>=6.0.1

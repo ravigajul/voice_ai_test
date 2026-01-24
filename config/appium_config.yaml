@@ -1,0 +1,41 @@
+# Appium Configuration for Papa John's Voice Ordering Test
+
+appium:
+  server_url: "http://localhost:4723"
+  
+capabilities:
+  platformName: "Android"
+  automationName: "UiAutomator2"
+  deviceName: "Android Device"  # Will use connected device
+  app: ""  # Leave empty to use installed app
+  appPackage: "com.papajohns.android.debug.qa"
+  appActivity: "com.papajohns.android.MainActivity"
+  noReset: false  # Clear app data between tests
+  fullReset: false
+  autoGrantPermissions: true
+  newCommandTimeout: 300
+
+# Timeouts
+timeouts:
+  implicit_wait: 10
+  explicit_wait: 15
+  page_load: 20
+
+# Test configuration
+test:
+  screenshot_dir: "/tmp/screenshots"
+  audio_dir: "/tmp/pizza_voice_test"
+  take_screenshots: true
+  record_audio: true
+
+# Voice AI configuration
+voice_ai:
+  tts_voice: "en-US-JennyNeural"  # Edge TTS voice
+  speech_recognition_timeout: 10
+  speech_phrase_time_limit: 8
+
+# Ollama configuration
+ollama:
+  base_url: "http://localhost:11434"
+  model: "qwen2.5:7b"  # Using available model
+  timeout: 30

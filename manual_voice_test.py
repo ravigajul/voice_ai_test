@@ -1,5 +1,4 @@
-
-#source /Users/ravigajul/Documents/pizza-voice-test/.venv/bin/activate && python3 /Users/ravigajul/Documents/pizza-voice-test/manual_voice_test.py
+# source /Users/ravigajul/Documents/pizza-voice-test/.venv/bin/activate && python3 /Users/ravigajul/Documents/pizza-voice-test/manual_voice_test.py
 """
 Interactive AI-driven Voice Ordering Test
 
@@ -12,34 +11,84 @@ Instructions:
 3. The AI customer, "Ravi," will start the conversation.
 4. When you see "🔴 Listening for Agent...", speak your response as the
    Papa John's agent.
-5. The script will transcribe your response, and Ravi will reply.
+5. The script will transc
+ribe your response, and Ravi will reply.
 6. The conversation continues until the order is complete or someone says "exit".
 """
 
+import argparse
+import os
 import speech_recognition as sr
 import sys
 from src.ollama_client import OllamaClient
 from src.voice_ai import speak_sync
 
-RAVI_PERSONA = """
-You are Ravi, a busy customer calling Papa John's to order pizza.
+PERSONAS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "personas")
 
-**Your Goal:**
-1.  Order pizza and any side items for your family.
-2.  Confirm the final order details with the agent.
-3.  Wait for the agent to ask you to finalize the order for payment.
-4.  When the agent asks for final confirmation, you should agree (e.g., "Yes, that's correct, please proceed.").
-5.  The conversation concludes when the agent confirms they are transferring you to the payment system. Your final response should be a simple acknowledgment like "Thank you." or "Great."
 
-**Your Personality:**
-- You are direct and a little impatient, but not rude.
-- You want to be efficient.
+def load_persona(persona_name):
+    """Load a persona from a text file in the personas/ directory."""
+    filepath = os.path.join(PERSONAS_DIR, f"{persona_name}.txt")
+    if not os.path.isfile(filepath):
+        available = [
+            os.path.splitext(f)[0]
+            for f in os.listdir(PERSONAS_DIR)
+            if f.endswith(".txt")
+        ]
+        print(f"❌ Persona '{persona_name}' not found at {filepath}")
+        print(f"   Available personas: {', '.join(sorted(available))}")
+        sys.exit(1)
+    with open(filepath, "r") as f:
+        return f.read()
 
-**Rules of Conversation:**
-- **DO NOT** repeat the entire order back to the agent unless they ask you to. A simple "yes" or "that's correct" is enough for confirmation.
-- **CRITICAL:** Your response must ONLY be Ravi's dialogue. Do NOT include any explanations, parenthetical thoughts, or out-of-character text.
-- Once the agent says they are transferring you for payment, the conversation is over from your side. Just give a brief, final acknowledgment.
-"""
+
+def list_personas():
+    """List all available persona files."""
+    if not os.path.isdir(PERSONAS_DIR):
+        return []
+    return sorted(
+        os.path.splitext(f)[0]
+        for f in os.listdir(PERSONAS_DIR)
+        if f.endswith(".txt")
+    )
+
+
+PERSONA_GENERATOR_SYSTEM = """You are a test scenario designer for a pizza ordering voice AI system.
+Given a user's test scenario description, generate a detailed customer persona prompt.
+The persona is always named "Ravi" and is calling Papa John's to order pizza.
+
+You MUST output ONLY the persona prompt text — no commentary, no markdown fences, no preamble.
+
+Follow this exact structure:
+1. Opening line describing who Ravi is and the scenario context
+2. **Your Order:** — the specific items Ravi wants to order
+3. **Conversation Flow:** — numbered steps for Greeting, Ordering, Time Confirmation, Order Review, Final Confirmation, and Handoff
+4. **Personality:** — bullet points describing how Ravi behaves
+5. **Rules:** — output rules (spoken dialogue only, concise, etc.)
+6. **Example Responses:** — 4-6 short example lines Ravi might say"""
+
+
+def generate_persona_from_scenario(scenario, ollama):
+    """Use Ollama to generate a persona prompt from a free-text scenario description."""
+    example_persona = load_persona("default")
+
+    prompt = f"""Here is an example persona for reference:
+
+---
+{example_persona}
+---
+
+Now generate a NEW persona for this test scenario:
+"{scenario}"
+
+Output only the persona text, matching the structure of the example above."""
+
+    print("🧠 Generating persona from scenario description...")
+    persona = ollama.generate(prompt, system=PERSONA_GENERATOR_SYSTEM)
+    if not persona:
+        print("❌ Failed to generate persona from scenario. Falling back to default.")
+        return load_persona("default")
+    return persona
 
 
 def select_microphone():
@@ -71,6 +120,43 @@ def select_microphone():
 
 def main():
     """Main function to run the interactive voice ordering session."""
+    parser = argparse.ArgumentParser(description="Interactive AI-driven Voice Ordering Test")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--persona", "-p",
+        default=None,
+        help=f"Persona file to use. Available: {', '.join(list_personas()) or 'none found'}",
+    )
+    group.add_argument(
+        "--scenario", "-s",
+        default=None,
+        help='Describe a test scenario in plain English, e.g. "customer who is hard of hearing and keeps asking the agent to repeat"',
+    )
+    parser.add_argument(
+        "--list-personas", action="store_true",
+        help="List available personas and exit",
+    )
+    args = parser.parse_args()
+
+    if args.list_personas:
+        print("Available personas:")
+        for name in list_personas():
+            print(f"  - {name}")
+        return
+
+    ollama = OllamaClient()
+
+    if args.scenario:
+        ravi_persona = generate_persona_from_scenario(args.scenario, ollama)
+        print(f"📋 Generated persona from scenario: \"{args.scenario}\"")
+        print("-" * 60)
+        print(ravi_persona)
+        print("-" * 60)
+    else:
+        persona_name = args.persona or "default"
+        ravi_persona = load_persona(persona_name)
+        print(f"📋 Loaded persona: {persona_name}")
+
     mic_index = None
     try:
         # Try to find and set the default microphone
@@ -89,7 +175,6 @@ def main():
             mic_index = select_microphone()
 
         recognizer = sr.Recognizer()
-        ollama = OllamaClient()
 
         print("You are the Papa John's Agent. Speak your opening line.")
         print("-" * 60)
@@ -131,7 +216,7 @@ def main():
                 prompt = f"Conversation History:\n" + "\n".join(conversation_history)
                 prompt += "\n\nYou are Ravi. What do you say next?"
 
-                ravi_response = ollama.generate(prompt, system=RAVI_PERSONA)
+                ravi_response = ollama.generate(prompt, system=ravi_persona)
 
                 # 3. Ravi (AI) speaks
                 print(f'   👤 Ravi (AI): "{ravi_response}"')

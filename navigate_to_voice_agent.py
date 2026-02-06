@@ -460,6 +460,6 @@ def navigate_to_voice_agent(username=None, password=None, keep_session_open=Fals
 
 if __name__ == "__main__":
     import sys
-    username = "ravi_gajul@papajohns.com" #sys.argv[1] if len(sys.argv) > 1 else None
-    password = "Welcome!123" #sys.argv[2] if len(sys.argv) > 2 else None
+    username = sys.argv[1] if len(sys.argv) > 1 else None
+    password = sys.argv[2] if len(sys.argv) > 2 else None
     navigate_to_voice_agent(username, password, keep_session_open=True)

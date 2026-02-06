@@ -25,12 +25,66 @@ This script simulates a conversation between a human agent (you) and an AI-power
     source .venv/bin/activate
     ```
 
-2.  **Run the Script**: Execute the `manual_voice_test.py` script.
+2.  **Run the Script**: You can run the test in three ways:
+
+    ### Option A: Default Persona
+
+    Uses the standard "busy customer" persona.
+
     ```bash
     python manual_voice_test.py
     ```
 
+    ### Option B: Pre-built Persona File
+
+    Choose from available personas in the `personas/` directory.
+
+    ```bash
+    # List all available personas
+    python manual_voice_test.py --list-personas
+
+    # Run with a specific persona
+    python manual_voice_test.py --persona rushed
+    python manual_voice_test.py --persona indecisive
+    python manual_voice_test.py --persona large_order
+    ```
+
+    **Available personas:**
+
+    | Persona      | Description                                                           |
+    | ------------ | --------------------------------------------------------------------- |
+    | `default`    | Clear, concise customer ordering pepperoni + veggie + garlic knots    |
+    | `rushed`     | Impatient customer who gives the entire order upfront in minimal words |
+    | `indecisive` | Hesitant customer who asks about specials and changes their mind      |
+    | `large_order` | Friendly customer placing a big party order across multiple categories |
+
+    ### Option C: Dynamic Scenario (AI-generated persona)
+
+    Describe any test scenario in plain English and a persona will be generated at runtime.
+
+    ```bash
+    # Customer with hearing difficulty
+    python manual_voice_test.py --scenario "customer who is hard of hearing and keeps asking the agent to repeat"
+
+    # Angry customer
+    python manual_voice_test.py --scenario "angry customer who received the wrong order last time and wants a discount"
+
+    # Confused elderly customer
+    python manual_voice_test.py --scenario "elderly customer who is confused about the menu and needs help choosing"
+
+    # Customer who changes delivery to pickup
+    python manual_voice_test.py --scenario "customer who starts ordering for delivery but then changes to pickup halfway through"
+
+    # Non-native English speaker
+    python manual_voice_test.py --scenario "customer whose first language is not English and uses simple vocabulary"
+    ```
+    The generated persona will be printed to the console before the conversation starts so you can review it.
+
 3.  **Select Microphone**: The script will automatically try to find the default "MacBook Pro Microphone". If it can't, it will list all available microphones. Enter the number corresponding to the microphone you wish to use for speaking.
+
+## Adding a New Persona
+
+To create a reusable persona, add a `.txt` file to the `personas/` directory. Use `personas/default.txt` as a template. The filename (without `.txt`) becomes the persona name you pass to `--persona`.
 
 ## The Test Flow
 

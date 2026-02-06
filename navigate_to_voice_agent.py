@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+no#!/usr/bin/env python3
 """
 Complete Navigation to Voice Agent
 Navigates through all setup steps to voice agent ready state

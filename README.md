@@ -1,6 +1,6 @@
 # AI-Powered Voice Ordering Automation Test
 
-This project provides an end-to-end testing framework for a pizza ordering mobile application, combining traditional UI automation with AI-driven voice interaction.
+This project provides an end-to-end testing framework for a food ordering mobile application, combining traditional UI automation with AI-driven voice interaction.
 
 The test launches the target application, navigates to the voice ordering screen, and then initiates a full, interactive conversation with an AI customer to place an order.
 

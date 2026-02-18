@@ -1,0 +1,41 @@
+Order Verification Report
+Time: 2026-02-18 11:53:10
+Result: FAILED (Score: 33.33/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 33.33,
+  "matched_items": [
+    {
+      "item_name": "Large Pepperoni Pizza",
+      "expected_quantity": null,
+      "screen_quantity": null
+    },
+    {
+      "item_name": "Garlic Parmesan Breadsticks",
+      "expected_quantity": null,
+      "screen_quantity": null
+    }
+  ],
+  "missing_items": [
+    {
+      "item_name": "Two-Liter Pepsi",
+      "expected_quantity": null,
+      "screen_quantity": null
+    },
+    "Back"
+  ],
+  "extra_items": [
+    "Special\nCreate Your Own",
+    "Large Original Crust Pepperoni"
+  ],
+  "reasoning": "The order items that matched between expected and screen are the \"Large Pepperoni Pizza\" and the \"Garlic Parmesan Breadsticks\". The actual order is missing a \"Two-Liter Pepsi\", and includes an additional item called \"Special\nCreate Your Own\" as well as \"Large Original Crust Pepperoni\" | Payment card mismatch: expected ...007, found 'Payment by credit card: $20.49'",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964329",
+    "payment": "Payment by credit card: $20.49",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.49"
+  }
+}

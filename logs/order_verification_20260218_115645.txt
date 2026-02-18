@@ -1,0 +1,16 @@
+Order Verification Report
+Time: 2026-02-18 11:56:45
+Result: FAILED (Score: 0/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 0,
+  "matched_items": [],
+  "missing_items": [
+    "2 Large Pepperoni Pizza"
+  ],
+  "extra_items": [],
+  "reasoning": "Order Details tab could not be opened \u2014 item verification skipped.",
+  "overview": {}
+}

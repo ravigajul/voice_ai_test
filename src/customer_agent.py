@@ -20,7 +20,7 @@ class CustomerAgent:
             ollama_model: Ollama model to use for generating customer responses
         """
         self.ollama = OllamaClient(model=ollama_model)
-        self.voice_ai = VoiceAI(voice="en-US-AmberNeural")  # Different voice from agent
+        self.voice_ai = VoiceAI(voice="en-US-AriaNeural")  # Different voice from agent
         self.conversation_history = []
         self.interaction_count = 0
 

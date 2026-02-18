@@ -1,0 +1,20 @@
+Persona: default
+Time: 2026-02-18 13:42:34
+--------------------
+
+Agent:  Oh, acid flow... ahh...
+Ravi: I'd like to place an order please.
+Agent:  Sure, what would you like to order?
+Ravi: I'd like to order a large pepperoni pizza.
+Agent:  Got it. A large pepperoni pizza.
+Ravi: Can I also get an order of breadsticks?
+Agent:  Certainly, rough.
+Ravi: Yes, that sounds right.
+Agent:  Apologies, Ravi. I was confirming your order of original breadsticks. Is there anything else I can get for you?
+Ravi: No, that's all for me, thank you.
+Agent:  We've applied the best available deals for your order. Would you like to finalize your order?
+Ravi: Yes, I'd like to finalize my order.
+Agent:  Your order total is being calculated.
+Ravi: Yes, that's right.
+Agent:  Great. Can you please provide your CVV?
+Ravi: Yes, the CVV is 358.

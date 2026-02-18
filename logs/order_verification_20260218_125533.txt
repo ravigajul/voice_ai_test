@@ -1,0 +1,22 @@
+Order Verification Report
+Time: 2026-02-18 12:55:33
+Result: PASSED (Score: 100/100)
+----------------------------------------
+
+{
+  "passed": true,
+  "score": 100,
+  "matched_items": [
+    "1 large pepperoni"
+  ],
+  "missing_items": [],
+  "extra_items": [],
+  "reasoning": "Keyword matching: 1/1 expected items found on screen. | Note: payment card shown as 'Payment by credit card: $20.49' (expected ...007)",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964332",
+    "payment": "Payment by credit card: $20.49",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.49"
+  }
+}

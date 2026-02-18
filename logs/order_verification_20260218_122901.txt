@@ -1,0 +1,40 @@
+Order Verification Report
+Time: 2026-02-18 12:29:01
+Result: FAILED (Score: 30/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 30,
+  "matched_items": [
+    {
+      "description": "2 Large Pepperoni Pizza",
+      "expected_id": 0,
+      "actual_id": 3
+    },
+    {
+      "description": "Garlic Parmesan Breadsticks (Quantity: Not specified)",
+      "expected_id": 1,
+      "actual_id": 2
+    },
+    {
+      "description": "2 Liter Pepsi",
+      "expected_id": 2,
+      "actual_id": 0
+    }
+  ],
+  "missing_items": [
+    {
+      "description": "Small Pepperoni Pizza (Quantity: Not specified)"
+    }
+  ],
+  "extra_items": [],
+  "reasoning": "Score of 30 is due to a partial match for 'Large Pepperoni Pizza' and 'Garlic Parmesan Breadsticks (Quantity: Not specified)', but the actual order has incorrect quantity for both items. The only missing item from the expected order is 'Small Pepperoni Pizza (Quantity: Not specified)' | Note: payment card shown as 'Payment by credit card: $20.49' (expected ...007)",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964332",
+    "payment": "Payment by credit card: $20.49",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.49"
+  }
+}

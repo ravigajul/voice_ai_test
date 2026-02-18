@@ -1,0 +1,41 @@
+Persona: default
+Time: 2026-02-18 11:37:21
+--------------------
+
+Agent:  As Robby, what can I get for you today?
+Ravi: I'll need the large pepperoni pizza, can we add some garlic knots to that please?
+Agent:  Absolutely, Ravi, one large pepperoni pizza and an order of garlic nuts.
+Ravi: I'd also like to get some breadsticks instead, can I substitute the garlic knots for those please?
+Agent:  No problem, Ravi. I've swapped the garlic knots for breadsticks.
+Ravi: Can we add some wings or a salad to that order as well?
+Agent:  We don't have salads, but we do have a variety of chicken wings. What kind of wings would you like?
+Ravi: I'd like to get the buffalo wings instead.
+Agent:  Sure thing, Robbie. I've added Buffalo Wings here order. Anything else?
+Ravi: I'd also like to add some onion rings to that order, can we do that?
+Agent:  I'm sorry, Robbie. We don't have onion roll.
+Ravi: I'd like to get the wings instead of garlic knots then.
+Agent:  Okay, Robbie.
+Ravi: Can we add some chicken wings to that order instead of garlic knots?
+Agent:  Ravi, I've already removed the breadsticks and added the buffalo wing.
+Ravi: I'd like to get the 10-piece chicken wings instead of the buffalo wings.
+Agent:  We have buffalo boneless chicken wings, barbecue boneless chicken wings and others. Which one would you like?
+Ravi: I'll have the barbecue boneless chicken wings.
+Agent:  Got it, Robbie. I've updated your order.
+Ravi: I'd like to get the 10-piece chicken wings instead of the buffalo wings.
+Agent:  Robbie, I've already updated your order to include 10 piece barbecue boneless chicken wings. Is there anything else I can help you with?
+Ravi: I'd like to get the 10-piece chicken wings instead of the garlic knots.
+Agent:  Robbie, I've already updated your order to include 10-piece barbecue boneless chicken wings
+Ravi: I'll have the 15-piece chicken wings instead of the garlic knots please.
+Agent:  Robbie, I've already removed the garlic knots.
+Ravi: That's fine, skip it.
+Agent:  Okay Robbie.
+Ravi: I'd like to get the 10-piece chicken wings instead of the garlic knots please.
+Agent:  Robbie, I've already updated your order.
+Ravi: I'll have the 15-piece chicken wings instead of the garlic knots.
+Agent:  Rob, you have already removed the garlic nuts.
+Ravi: I'd like to get the 15-piece chicken wings instead of the garlic knots please.
+Agent:  Ravi, I've already removed the garlic nuts.
+Ravi: I'll have the 10-piece chicken wings.
+Agent:  Robbie, you already have the...
+Ravi: I'll have the 15-piece chicken wings instead of the garlic knots please.
+Agent:  Robbie, I've already removed the garlic nuts.

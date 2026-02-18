@@ -1,0 +1,21 @@
+Order Verification Report
+Time: 2026-02-18 12:43:45
+Result: FAILED (Score: 0/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 0,
+  "matched_items": [],
+  "missing_items": [
+    "2 Large Pepperoni Pizza"
+  ],
+  "extra_items": [
+    "Garlic Parmesan Breadstick",
+    "Large Original Crust Pepperoni",
+    "Special Create Your Own Pizza",
+    "2-Liter Pepsi"
+  ],
+  "reasoning": "Expected order was not fully matched.",
+  "overview": {}
+}

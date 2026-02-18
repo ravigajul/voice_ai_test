@@ -1,0 +1,19 @@
+Order Verification Report
+Time: 2026-02-18 12:50:45
+Result: FAILED (Score: 66/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 66,
+  "matched_items": [
+    "2 Large Pepperoni Pizza",
+    "1 2-liter Pepsi"
+  ],
+  "missing_items": [
+    "1 Original Breadsticks"
+  ],
+  "extra_items": [],
+  "reasoning": "Keyword matching: 2/3 expected items found on screen. Not found: 1 Original Breadsticks.",
+  "overview": {}
+}

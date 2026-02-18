@@ -80,7 +80,10 @@ This script simulates a conversation between a human agent (you) and an AI-power
     ```
     The generated persona will be printed to the console before the conversation starts so you can review it.
 
-3.  **Select Microphone**: The script will automatically try to find the default "MacBook Pro Microphone". If it can't, it will list all available microphones. Enter the number corresponding to the microphone you wish to use for speaking.
+3.  **Select Microphone**: The script will automatically search for a default microphone.
+    - The default search term is `"MacBook Pro Microphone"`.
+    - You can override this with the `--mic` flag. For example: `python manual_voice_test.py --mic "My Headset"`
+    - If the specified microphone isn't found, the script will list all available devices and prompt you to select one by number.
 
 ## Adding a New Persona
 
@@ -93,6 +96,14 @@ To create a reusable persona, add a `.txt` file to the `personas/` directory. Us
 3.  **Listen for the Cue**: When you see the `🔴 Listening for Agent...` message, it's your turn to speak.
 4.  **AI Responds**: The script will capture your voice, transcribe it, and send it to the AI customer, "Ravi." Ravi will then think and generate a spoken response.
 5.  **Continue the Conversation**: The conversation will continue turn by turn. Your goal is to take Ravi's order and guide the conversation to a conclusion.
+
+## Conversation Logs
+
+For quality assurance and review, a full transcript of every test run is automatically saved.
+
+-   **Location**: A new `logs/` directory is created in the project root.
+-   **Filename**: Each log is a `.txt` file named with the exact date and time of the test run (e.g., `test_run_20240521_153000.txt`).
+-   **Content**: The log contains the persona used, the timestamp, and the full back-and-forth dialogue between the agent and Ravi.
 
 ## How to End the Test Successfully
 

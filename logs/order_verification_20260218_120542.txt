@@ -1,0 +1,24 @@
+Order Verification Report
+Time: 2026-02-18 12:05:42
+Result: FAILED (Score: 0/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 0,
+  "matched_items": [],
+  "missing_items": [
+    "2 Large Pepperoni Pizza",
+    "1 Order of Breadsticks",
+    "1 2-liter Pepsi"
+  ],
+  "extra_items": [],
+  "reasoning": "JSON parse error: Expecting value: line 10 column 13 (char 178) | Payment card mismatch: expected ...007, found 'Payment by credit card: $20.15'",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964331",
+    "payment": "Payment by credit card: $20.15",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.15"
+  }
+}

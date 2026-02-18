@@ -1,0 +1,14 @@
+Persona: default
+Time: 2026-02-18 12:42:00
+--------------------
+
+Agent:  What can I get for you today?
+Ravi: I'd like to place an order please.
+Agent:  What would you like to order?
+Ravi: I'd like a large pepperoni pizza, please.
+Agent:  One large pepperoni pizza, got it. Anything else, Robbie?
+Ravi: No, that's all for now, thanks!
+Agent:  We've applied the best available deals for your order. Would you like to finalize your order?
+Ravi: Yes, I'd like to finalize my order.
+Agent:  Would you like to pay with your card handy?
+Ravi: Yes, the CVV is 358.

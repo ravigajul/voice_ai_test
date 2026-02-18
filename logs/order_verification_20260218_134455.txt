@@ -1,0 +1,24 @@
+Order Verification Report
+Time: 2026-02-18 13:44:55
+Result: FAILED (Score: 50/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 50,
+  "matched_items": [
+    "1 large pepperoni"
+  ],
+  "missing_items": [
+    "0 original breadsticks"
+  ],
+  "extra_items": [],
+  "reasoning": "Keyword matching: 1/2 expected items found on screen. Not found: 0 original breadsticks. | Note: payment card shown as 'Payment by credit card: $20.49' (expected ...007)",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964332",
+    "payment": "Payment by credit card: $20.49",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.49"
+  }
+}

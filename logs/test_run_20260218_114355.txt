@@ -1,0 +1,36 @@
+Persona: default
+Time: 2026-02-18 11:43:55
+--------------------
+
+Agent:  What can I get for you today?
+Ravi: "I'd like to order a large pepperoni and sausage pizza, please."
+Agent:  Sounds delicious, anything else?
+Ravi: "Yes."
+Agent:  What else can I get for you?
+Ravi: "Can I also get an order of garlic knots and a side salad?"
+Agent:  We don't have side-telegence on the menu.
+Ravi: "Can I substitute for the garlic knots, maybe breadsticks?"
+Agent:  Sure, Ravi, we have original breadsticks and garlic Parmesan bread.
+Ravi: "I'll take the garlic Parmesan bread instead."
+Agent:  So that's a large pepperoni and sausage pizza and garlic Parmesan breadsticks. Anything else.
+Ravi: "Can I get an order of ranch dressing for my side salad?"
+Agent:  Robbie, we don't have side salads. Would you like to add ranch dipping sauce for your breadsticks?
+Ravi: "I'll take the garlic Parmesan breadsticks instead."
+Agent:  I've added another order of garlic Parmesan breadsticks to your order, Ravi. Is there anything else I can get for you?
+Ravi: "I'll have a medium."
+Agent:  What would you like for your medium order, Robbie?
+Ravi: "Peanut."
+Agent:  I'm sorry, Robbie. I don't see peanut on our menu.
+Ravi: "I'll take the large instead."
+Agent:  Could you please tell me what item you'd like in a large size, Robbie?
+Ravi: "I'll have a 10-piece."
+Agent:  What 10 piece item would you like, Robbie? We have 10 piece barbecue boneless chicken wings, buffalo boneless chicken wings, garlic parmesan, boneless chicken wings, honey chipotle boneless chicken wings, hot lemon, pepper boneless chicken wings, and unsaw spawnless chicken wings.
+Ravi: I'll have the 10-piece garlic parmesan.
+Agent:  Got it, Robbie.
+Ravi: "I'll take a large pepperoni and sausage pizza."
+Agent:  I've added another large pepperoni and sausage pizza to your order around me.
+Ravi: No, that's fine, skip it.
+Agent:  Okay Robbie, is there anything else I can get for you?
+Ravi: I'll take the large pepperoni and sausage pizza then.
+Agent:  I've added another large pepperoni and sausage pizza to your order, Ravi. Anything else?
+Ravi: I'll have a medium.

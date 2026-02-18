@@ -1,0 +1,25 @@
+Order Verification Report
+Time: 2026-02-18 13:21:38
+Result: FAILED (Score: 66/100)
+----------------------------------------
+
+{
+  "passed": false,
+  "score": 66,
+  "matched_items": [
+    "1 Large Pepperoni Pizza",
+    "1 2-Liter Pepsi"
+  ],
+  "missing_items": [
+    "1 Order of Breadsticks"
+  ],
+  "extra_items": [],
+  "reasoning": "Keyword matching: 2/3 expected items found on screen. Not found: 1 Order of Breadsticks. | Note: payment card shown as 'Payment by credit card: $20.49' (expected ...007)",
+  "overview": {
+    "item_count": "3 items",
+    "order_number": "Order #468964332",
+    "payment": "Payment by credit card: $20.49",
+    "order_total": "Order Total",
+    "order_total_amount": "$20.49"
+  }
+}

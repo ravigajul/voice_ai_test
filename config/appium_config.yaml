@@ -10,7 +10,7 @@ capabilities:
   app: ""  # Leave empty to use installed app
   appPackage: "com.papajohns.android.debug.qa"
   appActivity: "com.papajohns.android.MainActivity"
-  noReset: false  # Clear app data between tests
+  noReset: true  # Keep app state (don't clear data between tests)
   fullReset: false
   autoGrantPermissions: true
   newCommandTimeout: 300

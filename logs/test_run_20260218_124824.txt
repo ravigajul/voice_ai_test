@@ -1,0 +1,18 @@
+Persona: default
+Time: 2026-02-18 12:48:24
+--------------------
+
+Agent:  I'm going to get for you today.
+Ravi: Hi, can I please place an order at Papa John's?
+Agent:  Absolutely, Ravi. What are you in the mood?
+Ravi: I'd like a large pepperoni pizza.
+Agent:  Got it, Ravi. Large pepperoni pizza. Anything else?
+Ravi: I'd also like an order of breadsticks and a 2-liter Pepsi.
+Agent:  Would you like the original breadsticks or the garlic Parmesan breadsticks?
+Ravi: I'll take the original breadsticks, please.
+Agent:  Okay, Ravi.
+Ravi: I'd also like to pay by credit card, yes
+Agent:  We've applied the best available deals for your order. Would you like to finalize your order?
+Ravi: Yes, that's right.
+Agent:  Okay, Ravi. You'll be paying with a credit card ending in 007. Can you please provide the CVV?
+Ravi: Yes, the CVV is 358.

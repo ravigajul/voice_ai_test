@@ -1,0 +1,32 @@
+Persona: default
+Time: 2026-02-18 13:17:42
+--------------------
+
+Agent:  A jump. What can I get for you today?
+Ravi: I'd like to place an order please.
+Agent:  Okay, what would you like to order?
+Ravi: I'd like a large pepperoni pizza.
+Agent:  And girls don't like it.
+Ravi: I'd actually like to stick with the original request. That's one large pepperoni pizza, correct?
+Agent:  Yes, that's correct. One large pepperoni pizza. Is there anything else I can get for you, Robby?
+Ravi: Yes, that's right.
+Agent:  Great! What else can I add to your order?
+Ravi: Actually, I'd like an order of breadsticks and a 2-liter Pepsi.
+Agent:  Sure, I'll add an order of breadsticks and a two liter Pepsi. Is there anything else?
+Ravi: Yes, that's right.
+Agent:  Okay, Robbie, what else can I get for you?
+Ravi: I'd like an order of breadsticks and a 2-liter Pepsi to go with the pizza.
+Agent:  You already?
+Ravi: I said I wanted one order of breadsticks, not two. Can I get just one order of breadsticks instead?
+Agent: 
+Ravi: Yes, can I get just one order of breadsticks as part of my original order for the pizza and 2-liter Pepsi?
+Agent:  Yes, I've adjusted your order to include one order of breadsticks and one two liter Pepsi. Is there anything else Ravi?
+Ravi: Yes, that's right.
+Agent:  I won't!
+Ravi: Yes, can I get a total and is it ready for pickup?
+Agent:  I cannot provide the total amount, but I can confirm your order is ready for pickup in approximately 20
+Ravi: I'd like to review my order one more time to make sure everything is correct. Is that a large pepperoni pizza, one order of breadsticks, and one 2-liter Pepsi?
+Agent:  Yes, that's correct, Robbie. One large pepperoni pizza.
+Ravi: Yes, that's right.
+Agent:  Okay, Robby, please provide your CVV to finalize the order.
+Ravi: Yes, the CVV is 358.
